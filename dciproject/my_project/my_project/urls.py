@@ -19,5 +19,6 @@ from django.urls import path, include #new
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('customer/', include('customer.urls')), #new
-
+    path('product/', include('Product.urls')),
+    path('api-auth/', include('rest_framework.urls')), #If you're intending to use the browsable API you'll probably also want to add REST framework's login and logout views.
 ]

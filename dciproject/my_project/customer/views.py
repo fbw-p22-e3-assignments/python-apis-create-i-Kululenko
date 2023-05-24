@@ -7,6 +7,8 @@ from .models import Customer
 from rest_framework import generics
 from .serializers import CustomerSerializer
 
+ 
+
 
 class CustomerCreate(generics.CreateAPIView):
     # API endpoint that allows creation of a new customer
@@ -33,3 +35,6 @@ class CustomerDelete(generics.RetrieveDestroyAPIView):
     # API endpoint that allows a customer record to be deleted.
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
+
+
+
